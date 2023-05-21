@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Genie</title>
+  <style>
+
+    body {
+      background-image: url('https://drive.google.com/uc?id=19svAe7Ehig4cPNCWQPDmHTOoeqInY-2b');
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-image: url('https://drive.google.com/uc?id=19svAe7Ehig4cPNCWQPDmHTOoeqInY-2b');
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 10px;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 10px;
+      position: relative;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background-color: #555;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+  
+    nav ul li:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -5px;
+      height: 80%;
+      width: 1px;
+      background-color: #fff;
+      transform: translateY(-50%);
+    }
+
+   
+    nav ul li:last-child:before {
+      display: none;
+    }
+
+   
+    .heading {
+      color: #fff;
+      font-size: 100px;
+      text-align: left;
+      margin: 0;
+      color: black;
+    }
+  
+   
+    .paragraph {
+      color: #fff;
+      font-size: 100px; 
+      text-align: left;
+      margin: 0;
+    }
+
+   
+    @media screen and (max-width: 768px) {
+      .heading {
+        font-size: 60px;
+      }
+
+      .paragraph {
+        font-size: 40px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .heading {
+        font-size: 40px;
+      }
+
+      .paragraph {
+        font-size: 30px;
+      }
+    }
+  </style>
+  <script>
+    function showContactPopup() {
+      alert("\nEmail: eventgenie@example.com\nPhone: 000-000-0000");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Event Genie</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#" onclick="showContactPopup(); return false;">Contact</a></li>
+      </ul>
+      <ul>
+        <li><a href="/index1">Customer Login</a></li>
+        <li><a href="/index">Event Planner Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1 class="heading">Events made </h1>
+  <h2 class="heading">effortless, </h2>
+  <p class="paragraph">
+    Moments made
+  </p>
+  <p class="paragraph">
+    magical.
+  </p>
+</body>
+</html>

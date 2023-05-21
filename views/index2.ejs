@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make Your Request</title>
+  <style>
+    body {
+      background-image: url('https://drive.google.com/uc?id=19svAe7Ehig4cPNCWQPDmHTOoeqInY-2b');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: lightyellow;
+      border: 2px solid black;
+      border-radius: 8px;
+      padding: 20px;
+      width: 400px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    input[type="text"] {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      width: 80%;
+    }
+
+    input[type="date"] {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      width: 50%;
+    }
+
+
+    .login-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #4070f4;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .login-button:hover {
+      background-color: #3659c3;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .checkbox-label {
+      margin-left: 8px;
+    }
+
+    .navigation {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .navigation ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navigation ul li {
+      margin-left: 10px;
+    }
+
+    .navigation ul li a {
+      text-decoration: none;
+      color: black;
+      padding: 5px;
+    }
+
+    @media screen and (max-width: 480px) {
+      .container {
+        width: 90%;
+        max-width: 350px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome</h1>
+    <form action="/index2" method="post">
+    <input type="text" id="Event" placeholder="Describe Your Event" name="desc" required>
+    <input type="text" id="city" placeholder="Location" name="location">
+    <input type="date" id="date" placeholder="date" name="date">
+    <div class="checkbox-container">
+      <input type="checkbox" id="rememberCheckbox" name="checkbox">
+      <label class="checkbox-label" for="rememberCheckbox">Urgent event?</label>
+    </div>
+    <button type="submit" class="login-button">Submit</button>
+  </form>
+  </div>
+    
+  <div class="navigation">
+    <form action="/useraccinfo" method="get"></form>
+    <ul>
+      <li><a href="/useraccinfo">My Profile</a></li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <h5>Interested caterers for your last Event request</h5>
+    <%newListItems.forEach(element =>{%>
+      <div class="item">
+        <h2><%=  element.Aname  %></h2>
+        <h4><%=  element.Anum  %></h4>
+        <h4><%=  element.Amail  %></h4>
+        <button class="login-button">See Contacts</button>
+      </div>
+      <%})%>
+  </div>
+
+</body>
+</html>

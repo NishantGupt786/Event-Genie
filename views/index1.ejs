@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-image: url('https://drive.google.com/uc?id=19svAe7Ehig4cPNCWQPDmHTOoeqInY-2b');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color:white;
+      border-radius: 6px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    
+
+    header {
+      font-size: 28px;
+      font-weight: 600;
+      color: #4070f4;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    .field {
+      height: 50px;
+      position: relative;
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 6px;
+    }
+
+    .input-field input {
+      height: 100%;
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .field input,
+    .field button {
+      height: 100%;
+      width: 100%;
+      border: none;
+      font-size: 16px;
+    }
+
+    .field button {
+      background-color:#4070f4;
+      color: white;
+      cursor: pointer;
+    }
+
+    .field input {
+      border: 1px ;
+      background-color: lightyellow;
+    }
+
+    .form-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .form-link span,
+    .form-link a {
+      font-size: 14px;
+      font-weight: 400;
+      color: #4070f4;
+    }
+
+    .form a {
+      color: blue;
+      text-decoration: underline;
+    }
+
+    .form a:hover {
+      text-decoration: underline;
+    }
+
+    .line {
+      position: relative;
+      height: 1px;
+      margin: 36px 0;
+      background-color: white;
+    }
+
+    .line::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      background: white;
+      height: 1px;
+      transform: translateY(-50%);
+    }
+
+    .line::after {
+      content: 'Or';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: #fff;
+      color: black;
+      padding: 0 10px;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+
+    .media-options {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .media-options .facebook,
+    .media-options .google {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 6px 12px;
+      position: relative;
+      top: -20px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .media-options .facebook {
+      background-color: #3b5998;
+    }
+
+    .media-options .google {
+      background-color: #db4a39;
+    }
+
+    .media-options .facebook i {
+      margin-right: 5px;
+    }
+
+    .media-options .google img {
+      width: 18px;
+      height: 15px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+  
+    @media (max-width: 600px) {
+      .container {
+        width: 90%;
+      }
+
+      header {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+    }
+
+   
+    @media (min-width: 601px) and (max-width: 1200px) {
+      .container {
+        width: 70%;
+      }
+    }
+
+ 
+    @media (min-width: 1201px) {
+      .container {
+        width: 50%;
+      }
+    }
+  
+    .signup-section, .forgot-password-section, .otp-section {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="forms">
+      <div class="login">
+        <div class="form-content">
+          <header>Login</header>
+          <form action="/index1" method="post">
+            <div class="field">
+              <input type="email" placeholder="Email" class="input-field" name="email" required>
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Password" class="input-field" name="password" required>
+            </div>
+            <div class="form-link">
+              <a href="/forgotpassword" class="forget-pass">Forgot password?</a>
+            </div>
+            <div class="field button-field">
+                <button type="submit" >Login</button>
+              </div>
+              <form action="/registerusers" method="get">
+                <div class="form-link">
+                  <span>Don't have an account? <a href="/registerusers" class="signup-link">Signup</a></span>
+                </div>
+              </form>
+          </form>
+        </div>
+        <div class="line"></div>
+        <div class="media-options">
+          <a href="#" class="facebook">
+            <i class='bx bxl-facebook-square'></i>
+            <span>Login with Facebook</span>
+          </a>
+        </div>
+        <div class="media-options">
+          <a href="#" class="google">
+            <i class='bx bxl-google'></i>
+            <span>Login with Google</span>
+          </a>
+        </div>
+      </div>
+
+
+</body>
+</html>

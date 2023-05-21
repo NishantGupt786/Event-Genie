@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <style>
+   
+    body {
+      background-image: url('https://drive.google.com/uc?id=19svAe7Ehig4cPNCWQPDmHTOoeqInY-2b');
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: lightyellow;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .heading {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    .points {
+      font-size: 20px;
+      text-align: left;
+      margin: 20px 0;
+    }
+
+  
+    .navigation {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .navigation ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .navigation ul li {
+      margin-right: 10px;
+      position: relative;
+    }
+
+    .navigation ul li a {
+      text-decoration: none;
+      color: black;
+      padding: 5px;
+    }
+
+    .navigation ul li:after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .navigation ul li:hover:after {
+      transform: scaleX(1);
+    }
+
+   
+    .back-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back-button a {
+      text-decoration: none;
+      color: black;
+      padding: 10px 20px;
+      background-color: lightgray;
+      border-radius: 5px;
+    }
+
+   
+    @media screen and (max-width: 768px) {
+      .container {
+        max-width: 90%;
+        margin: 50px auto;
+        padding: 10px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .heading {
+        font-size: 32px;
+      }
+
+      .points {
+        font-size: 16px;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navigation">
+    <ul>
+      <li><a href="webmain.html">Back</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <h1 class="heading">ABOUT US</h1>
+    <div class="points">
+      <p>1. Event Genie allows users to manage their timeframe, ranging from urgent events to events planned at a big timescale.</p>
+      <p>2. Event Genie verifies the credibility of the event planners through checks of their business license, previous client feedback and references, as well as insurance coverage.</p>
+      <p>3. We provide a detailed description on our website of the event planners, ranging from photos to customer reviews.</p>
+      <p>4. Event Genie provides transparent descriptions of all the event planners, creating trust and credibility among customers and ensuring maximum customer satisfaction.</p>
+    </div>
+    <div class="back-button">
+      <a href="webmain.html">Go Back</a>
+    </div>
+  </div>
+</body>
+</html>
