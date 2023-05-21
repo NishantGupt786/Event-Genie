@@ -8,3 +8,7 @@ Planning an event has never been easier with Event Genie. Whether you're arrangi
 Once you've found your ideal match, communicate seamlessly through our integrated messaging system. Discuss event details, share inspirations, and collaborate on every aspect of your event, from venue selection and decor to catering and entertainment. Event Genie ensures a smooth planning process, enabling you to create memorable experiences while staying within your desired budget.
 
 Please note this is just a prototype and is'nt full ready yet.
+
+
+
+By Nishant, Shrinil, Tanmay and Rujal.
