@@ -89,6 +89,10 @@ app.get('/registerusers',async (req, res) => {
     res.render("registerusers");
 });
 
+app.get('/about', (req, res)=>{
+    res.render("about");
+});
+
 app.get('/index1', (req, res)=>{
     res.render("index1");
 });
