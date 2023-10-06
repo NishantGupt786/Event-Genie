@@ -7,7 +7,7 @@ const notifier = require('node-notifier');
 const app = express();
 const mongoose = require("mongoose");
 const bcrypt = require('bcrypt');
-const port = 3000;
+const port = 3001;
 app.set('view engine', 'ejs');
 const saltRounds = 10;
 
@@ -18,7 +18,7 @@ app.use(express.static('public'));
 let currentUser = "";
 let currentPlanner = "";
 
-mongoose.connect('mongodb://127.0.0.1:27017/eventgenieDB');
+mongoose.connect('mongodb+srv://nishantgupta2325:ispassword5@cluster0.0nsgoyw.mongodb.net/EventDB');
 
 
 
@@ -372,6 +372,7 @@ app.post('/index',async function (req,res){
     if (foundPlanner) {
       bcrypt.compare(password, foundPlanner.password, function(err, result) {
           if (result === true) {
+            console.log(123)
             res.redirect("main");
           }
           else{
